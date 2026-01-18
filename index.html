@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axonix - Soluciones Tecnológicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú con logo -->
+    <nav>
+        <div class="logo">Axonix</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header principal -->
+    <header id="inicio">
+        <div class="header-content">
+            <h1>Bienvenido a Axonix</h1>
+            <p>Soluciones tecnológicas y automatización con estilo.</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- Servicios -->
+    <section id="servicios" class="reveal">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <h3>Automatización</h3>
+                    <p>Optimizamos tus procesos mediante tecnología avanzada.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Inteligencia Artificial</h3>
+                    <p>Aplicamos IA para mejorar la toma de decisiones en tu negocio.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Consultoría Tecnológica</h3>
+                    <p>Asesoramos a tu empresa para implementar soluciones efectivas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="reveal">
+        <div class="nosotros container">
+            <h2>Nosotros</h2>
+            <p>En Axonix somos un equipo de especialistas en tecnología, IA y automatización, dedicados a impulsar negocios con soluciones modernas y eficientes.</p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="reveal">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+                <p id="form-message"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Axonix. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
