@@ -322,11 +322,11 @@ footer {
 
 /* ===== Gracias (mensaje enviado) ===== */
 .thanks-page {
-  min-height: calc(100vh - 90px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .thanks-card {
