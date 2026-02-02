@@ -322,31 +322,22 @@ footer {
 
 
 /* ===== Gracias (mensaje enviado) - SOLUCIÓN DEFINITIVA ===== */
-.thanks-body {
+.thanks-body{
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr; /* nav ocupa su alto real, el resto queda para la página */
+  grid-template-rows: auto 1fr;
 }
 
-.thanks-page {
-  min-height: 0;               /* importante para que el 1fr funcione bien */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.thanks-page{
+  width: 100%;
+  display: grid;
+  place-items: center;
   padding: 40px 20px;
 }
 
-.thanks-card {
-  width: 100%;
-  max-width: 720px;
-  padding: 34px 28px;
-  border-radius: 25px;
-
-  background: linear-gradient(145deg, #ffffff, #f0f4ff);
-  border: 2px solid rgba(76,102,159,0.5);
-
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  text-align: center;
+/* Centrado garantizado aunque algo rompa el contenedor */
+.thanks-card{
+  margin: 0 auto;
 }
 
 .thanks-icon {
