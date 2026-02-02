@@ -1,14 +1,11 @@
 // Parallax header + efecto de movimiento en contenido
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const headerContent = document.querySelector('.header-content');
-    let offset = window.scrollY;
+    const offset = window.scrollY;
 
-    // Parallax del fondo
-    header.style.backgroundPositionY = offset * 0.5 + 'px';
-
-    // Movimiento suave del contenido (header)
-    headerContent.style.transform = `translateY(${offset * 0.2}px)`;
+    if (header) header.style.backgroundPositionY = offset * 0.5 + 'px';
+    if (headerContent) headerContent.style.transform = `translateY(${offset * 0.2}px)`;
 });
 
 // Animaciones al hacer scroll (reveal)
@@ -20,7 +17,6 @@ function revealOnScroll() {
 
     reveals.forEach(reveal => {
         const revealTop = reveal.getBoundingClientRect().top;
-
         if (revealTop < windowHeight - revealPoint) {
             reveal.classList.add('active');
         }
@@ -28,42 +24,16 @@ function revealOnScroll() {
 }
 
 window.addEventListener('scroll', revealOnScroll);
+// IMPORTANTE: esto hace que se vean las secciones al cargar
+window.addEventListener('load', revealOnScroll);
 
+// Mensaje simple al enviar (FormSubmit)
+const form = document.getElementById('contact-form');
+const msg = document.getElementById('form-message');
 
-// Formulario de contacto (frontend)
-    const form = document.getElementById('contact-form');
-    const msg = document.getElementById('form-message');
-
+if (form && msg) {
     form.addEventListener('submit', () => {
-      msg.textContent = "Enviando...";
-      msg.className = "";
+        msg.textContent = "Enviando mensaje...";
+        msg.className = "success";
     });
-
-    // Tomamos los datos del formulario
-    const data = {
-        nombre: form.nombre.value,
-        email: form.email.value,
-        mensaje: form.mensaje.value
-    };
-
-    try {
-        // URL de tu Worker
-        const response = await fetch('https://axonix-contact.rabatrixnelson.workers.dev', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            alert('¡Mensaje enviado con éxito!');
-            form.reset(); // Limpia el formulario
-        } else {
-            alert('Error al enviar el mensaje. Intente nuevamente.');
-        }
-    } catch (error) {
-        console.error(error);
-        alert('Error de conexión. Intente nuevamente.');
-    }
-
+}
