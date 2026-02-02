@@ -12,12 +12,12 @@
 <body>
   <nav>
     <div class="logo">Axonix</div>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="index.html#servicios">Servicios</a>
-      <a href="index.html#nosotros">Nosotros</a>
-      <a href="index.html#contacto">Contacto</a>
-    </div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
   </nav>
 
   <main class="thanks-page">
@@ -31,18 +31,18 @@
         Recibimos tu consulta y te responderemos a la brevedad.
       </p>
 
-      <script>
-       // Redirección automática después de leer el mensaje
-          setTimeout(() => {
-          window.location.href = "index.html";
-          }, 4000); // 4000 ms = 4 segundos
-      </script>
-
       <small class="thanks-note">
-        Si no ves nuestra respuesta, revisá la carpeta de spam o promociones.
+        Serás redirigido automáticamente al inicio en unos segundos…
       </small>
     </div>
   </main>
+
+  <script>
+    // Redirección automática (4 segundos)
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 4000);
+  </script>
 
   <script src="script.js"></script>
 </body>

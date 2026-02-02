@@ -322,7 +322,7 @@ footer {
 
 /* ===== Gracias (mensaje enviado) ===== */
 .thanks-page {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,54 +333,37 @@ footer {
   width: 100%;
   max-width: 720px;
   padding: 34px 28px;
-  border-radius: 18px;
+  border-radius: 25px;
 
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  border: 2px solid rgba(76,102,159,0.5);
 
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
 .thanks-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .thanks-card h1 {
   font-size: 2.1rem;
   margin: 0 0 10px;
+  color: #192f6a;
 }
 
 .thanks-card p {
   font-size: 1.05rem;
   line-height: 1.6;
-  margin: 0 0 22px;
-}
-
-.thanks-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-
-.thanks-btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.thanks-btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: transparent;
+  margin: 0 0 12px;
+  color: #192f6a;
 }
 
 .thanks-note {
   display: block;
   opacity: 0.85;
   margin-top: 6px;
+  font-weight: 600;
 }
