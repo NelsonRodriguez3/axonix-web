@@ -62,29 +62,37 @@
 
     <!-- Contacto -->
     <section id="contacto" class="reveal">
-        <div class="container">
-            <h2>Contacto</h2>
+  <div class="container">
+    <h2>Contacto</h2>
 
-            <form id="contact-form"
-                  action="https://formsubmit.co/contacto@axonix.com.ar"
-                  method="POST">
+    <form id="contact-form"
+          action="https://formsubmit.co/244124c5943a5d4da03b1f4d2ff6f6f9"
+          method="POST">
 
-                <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="email" name="email" placeholder="Correo" required>
-                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo" required>
+      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-                <!-- FormSubmit config -->
-                <input type="hidden" name="_subject" value="Nuevo contacto desde Axonix">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <!-- Opcional: volver a tu web luego de enviar -->
-                <input type="hidden" name="_next" value="https://axonix.com.ar/#contacto">
+      <!-- Honeypot anti-bots (no lo ve el usuario) -->
+      <input type="text" name="_honey" style="display:none">
 
-                <button type="submit">Enviar</button>
-                <p id="form-message"></p>
-            </form>
-        </div>
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="Nuevo contacto desde Axonix">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://axonix.com.ar/gracias.html">
+
+      <!-- Captcha:
+           - true = más protección (recomendado si te llega mucho spam)
+           - false = sin captcha (como lo tenías)
+      -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Enviar</button>
+      <p id="form-message"></p>
+    </form>
+  </div>
     </section>
+
 
     <!-- Footer -->
     <footer>

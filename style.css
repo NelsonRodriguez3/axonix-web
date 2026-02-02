@@ -319,3 +319,59 @@ footer {
 #form-message.error {
     color: #e74c3c;
 }
+
+/* Página Gracias */
+.thanks-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.thanks-card {
+  max-width: 720px;
+  width: 100%;
+  padding: 40px 28px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.thanks-card h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.thanks-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.thanks-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+}
+
+.thanks-note {
+  display: block;
+  opacity: 0.85;
+  margin-top: 6px;
+}

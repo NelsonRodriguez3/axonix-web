@@ -28,6 +28,7 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
 // Mensaje simple al enviar (FormSubmit)
+// Mensaje al enviar formulario (FormSubmit)
 const form = document.getElementById('contact-form');
 const msg = document.getElementById('form-message');
 
@@ -35,5 +36,12 @@ if (form && msg) {
     form.addEventListener('submit', () => {
         msg.textContent = "Enviando mensaje...";
         msg.className = "success";
+
+        // Evita doble click / doble envío
+        const button = form.querySelector("button[type='submit']");
+        if (button) {
+            button.disabled = true;
+            button.textContent = "Enviando...";
+        }
     });
 }
