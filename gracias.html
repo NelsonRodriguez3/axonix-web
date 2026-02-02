@@ -22,16 +22,21 @@
 
   <main class="thanks-page">
     <div class="thanks-card reveal active">
-      <h1>✅ ¡Mensaje enviado!</h1>
+      <div class="thanks-icon" aria-hidden="true">✅</div>
+
+      <h1>¡Mensaje enviado!</h1>
+
       <p>
         Gracias por contactar con <strong>Axonix</strong>.
         Recibimos tu consulta y te responderemos a la brevedad.
       </p>
 
-      <div class="thanks-actions">
-        <a class="btn" href="index.html">Volver al inicio</a>
-        <a class="btn btn-outline" href="index.html#contacto">Enviar otro mensaje</a>
-      </div>
+      <script>
+       // Redirección automática después de leer el mensaje
+          setTimeout(() => {
+          window.location.href = "index.html";
+          }, 4000); // 4000 ms = 4 segundos
+      </script>
 
       <small class="thanks-note">
         Si no ves nuestra respuesta, revisá la carpeta de spam o promociones.
