@@ -320,9 +320,16 @@ footer {
     color: #e74c3c;
 }
 
-/* ===== Gracias (mensaje enviado) ===== */
+
+/* ===== Gracias (mensaje enviado) - SOLUCIÓN DEFINITIVA ===== */
+.thanks-body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr; /* nav ocupa su alto real, el resto queda para la página */
+}
+
 .thanks-page {
-  min-height: calc(100vh - var(--nav-height));
+  min-height: 0;               /* importante para que el 1fr funcione bien */
   display: flex;
   align-items: center;
   justify-content: center;
