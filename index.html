@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>giAxonix Web Test Deploy Ok</title>
+    <title>Axonix - Soluciones tecnológicas</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
     <!-- Header principal -->
     <header id="inicio">
         <div class="header-content">
-            <h1>Bienvenido a Axonix Pruebagit</h1>
+            <h1>Bienvenido a Axonix</h1>
             <p>Soluciones tecnológicas y automatización con estilo.</p>
             <a href="#contacto" class="btn">Contáctanos</a>
         </div>
@@ -59,16 +59,19 @@
 
     <!-- Contacto -->
     <section id="contacto" class="reveal">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo" required>
-                <textarea placeholder="Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-                <p id="form-message"></p>
+        <form id="contact-form" action="https://formsubmit.co/contacto@axonix.com.ar" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-            </form>
+  <!-- Opcionales útiles -->
+           <input type="hidden" name="_subject" value="Nuevo contacto desde Axonix">
+           <input type="hidden" name="_captcha" value="false">
+           <input type="hidden" name="_template" value="table">
+
+           <button type="submit">Enviar</button>
+           <p id="form-message"></p>
+        </form>
         </div>
     </section>
 

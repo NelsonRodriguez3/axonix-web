@@ -31,11 +31,13 @@ window.addEventListener('scroll', revealOnScroll);
 
 
 // Formulario de contacto (frontend)
-// Seleccionamos el formulario
-const form = document.getElementById('contact-form');
+    const form = document.getElementById('contact-form');
+    const msg = document.getElementById('form-message');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Evita que recargue la página
+    form.addEventListener('submit', () => {
+      msg.textContent = "Enviando...";
+      msg.className = "";
+    });
 
     // Tomamos los datos del formulario
     const data = {
@@ -64,4 +66,4 @@ form.addEventListener('submit', async (e) => {
         console.error(error);
         alert('Error de conexión. Intente nuevamente.');
     }
-});
+
